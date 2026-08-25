@@ -882,53 +882,37 @@ select.ecard-select {
 
 
 /*auto adopt*/
+/* =====================================================
+   MOBILE / TABLET RESPONSIVE LAYOUT
+===================================================== */
 
-/* ================================
-   TABLET
-================================ */
+@media screen and (max-width: 700px) {
 
-@media (max-width: 1000px) {
-
-  header {
-    padding: 15px 20px;
-  }
-
-  nav {
-    margin-left: auto;
-    gap: 12px;
-  }
-
-  .nav-link,
-  .dropdown-toggle,
-  select.lang {
-    font-size: 14px;
-  }
-
-  .btn-primary {
-    padding: 9px 14px;
-    font-size: 14px;
-  }
-
-}
-
-
-/* ================================
-   MOBILE
-================================ */
-
-@media (max-width: 700px) {
+  /* ---------- HEADER ---------- */
 
   header {
-    padding: 15px;
+    width: 100%;
+    padding: 14px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 14px;
+    overflow: hidden;
   }
 
   .brand {
     width: 100%;
+    display: flex;
     justify-content: center;
+  }
+
+  .client-logo {
+    width: 280px;
+    max-width: 90vw;
+    height: auto;
+    position: static;
+    transform: none;
+    margin: 0;
   }
 
   nav {
@@ -937,23 +921,22 @@ select.ecard-select {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 12px;
+    flex-wrap: wrap;
   }
 
-  .nav-link,
-  .dropdown-toggle {
+  .nav-link {
     font-size: 14px;
   }
 
   .btn-primary {
-    font-size: 14px;
     padding: 9px 14px;
+    font-size: 14px;
   }
 
   select.lang {
     font-size: 14px;
-    height: 30px;
+    max-width: 150px;
   }
 
   .search-icon {
@@ -961,25 +944,212 @@ select.ecard-select {
     height: 22px;
   }
 
+
+  /* ---------- MAIN ---------- */
+
+  main {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 24px 26px 50px;
+    transform: none;
+  }
+
+
+  /* ---------- HELLO TITLE ---------- */
+
+  .page-title-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  h2.page-title {
+    font-size: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .page-title-line {
+    flex: 1;
+    min-width: 30px;
+  }
+
+  .lede {
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 12px 0 28px;
+  }
+
+
+  /* ---------- ECARD CARD ---------- */
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 28px;
+    padding: 20px 23px 45px;
+    box-sizing: border-box;
+  }
+
+
+  /* ---------- CARD TITLE ---------- */
+
+  .status {
+    font-size: 13px;
+    padding: 3px 7px;
+    margin-bottom: 8px;
+  }
+
+  .card h3 {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 24px;
+  }
+
+
+  /* ---------- CARD INFORMATION ---------- */
+
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 0;
+  }
+
+  .field {
+    margin-bottom: 16px;
+  }
+
+  .field label {
+    font-size: 12px;
+    letter-spacing: .08em;
+    margin-bottom: 4px;
+  }
+
+  .field .val {
+    font-size: 17px;
+    line-height: 1.35;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+
+  /* ---------- DIVIDER ---------- */
+
+  .divider {
+    width: 100%;
+    margin: 4px 0 20px;
+  }
+
+
+  /* ---------- ECARD SELECT ---------- */
+
+  .view-label {
+    font-size: 14px;
+    margin-bottom: 9px;
+  }
+
+  .view-row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  select.ecard-select {
+    width: 100%;
+    max-width: 100%;
+    height: 50px;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  .btn-view {
+    width: auto;
+    align-self: flex-start;
+    min-width: 92px;
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+
+
+  /* ---------- FOOTER SUPPORT ---------- */
+
+  .footer-support {
+    width: 100%;
+  }
+
+  .footer-support-inner {
+    width: 100%;
+    min-height: auto;
+    padding: 35px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .support-left {
+    font-size: 13px;
+  }
+
+  .support-right {
+    width: 100%;
+    padding-top: 0;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .footer-main {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 26px;
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .footer-middle {
+    width: 100%;
+    min-height: auto;
+    padding: 30px 26px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+
+  .footer-certifications {
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom {
+    padding: 35px 20px 25px;
+  }
+
 }
 
 
-/* ================================
-   SMALL PHONE
-================================ */
-
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
 
   header {
-    padding: 12px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   nav {
-    gap: 10px;
+    gap: 9px;
   }
 
-  .nav-link,
-  .dropdown-toggle {
+  .nav-link {
     font-size: 13px;
   }
 
@@ -988,36 +1158,33 @@ select.ecard-select {
     padding: 8px 12px;
   }
 
-  select.lang {
-    font-size: 13px;
+  main {
+    padding-left: 26px;
+    padding-right: 26px;
   }
 
-}
-
-
-
-
-
-
-@media (max-width: 700px) {
-
-  main {
-    width: 100%;
-    max-width: 100%;
-    padding: 17px 15px 50px;
-    transform: none;
+  h2.page-title {
+    font-size: 28px;
   }
 
   .card {
-    width: 100%;
+    padding-left: 23px;
+    padding-right: 23px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    column-gap: 0;
+  .card h3 {
+    font-size: 23px;
+  }
+
+  .field .val {
+    font-size: 16px;
   }
 
 }
+
+
+
+
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
